@@ -5,6 +5,8 @@ import {
     Icon,
     useDisclosure,
     Divider,
+    HStack,
+    Text,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -28,7 +30,53 @@ const NavbarIndex: React.FC = () => {
     return (
         <>
             {/* Desktop navbar */}
-            <Flex
+            <Flex w="100%" justifyContent='center' >
+                <Flex
+                    alignContent="center"
+                    w="80%"
+                    bg="#fff"
+                    px='2rem'
+                    rounded="30px"
+                    boxShadow="0px 0px 10px 5px #cac9c9"
+                    justifySelf="center"
+                    position="absolute"
+                    zIndex="100"
+                    top="0"
+                    mt='2rem'
+                >
+                    <ChakraNextImage
+                        src="/assets/flor.png"
+                        w="70px"
+                        h="70px"
+                        fit="contain"
+                    />
+                    <Text textAlign="center" alignSelf="center">
+                        Dra Andrea Finten
+                    </Text>
+
+                    <HStack ml="auto" spacing={5}>
+                        <Text>Inicio</Text>
+                        <Text>Servicios</Text>
+                        <Text>Cursos</Text>
+                        <Text>Contact</Text>
+                    </HStack>
+                    <Flex
+                        justifyContent="center"
+                        alignSelf="center"
+                        ml="3rem"
+                        px="2rem"
+                        py=".5rem"
+                        h="40px"
+                        rounded="50px"
+                        bg="#944141"
+                        boxShadow="0px 0px 5px 3px #dedede"
+                    >
+                        <Text color="#fff">Iniciar sesión</Text>
+                    </Flex>
+                </Flex>
+            </Flex>
+
+            {/* <Flex
                 w="100vw"
                 h="80px"
                 display={['none', 'none', 'none', 'flex', 'flex']}
@@ -78,7 +126,6 @@ const NavbarIndex: React.FC = () => {
                 </Button>
             </Flex>
 
-            {/* Mobile navbar */}
             <Flex
                 display={["flex", "flex", "flex", "none", "none"]}
                 position="fixed"
@@ -181,7 +228,7 @@ const NavbarIndex: React.FC = () => {
                         </Flex>
                     </Flex>
                 </motion.div>
-            </Flex>
+            </Flex> */}
         </>
     );
 };

@@ -1,26 +1,110 @@
-import { Flex, Grid, Icon, Text } from "@chakra-ui/react";
+import {
+    Box,
+    Button,
+    Container,
+    Flex,
+    HStack,
+    Icon,
+    Image,
+    Text,
+    VStack,
+} from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { getSession } from "next-auth/react";
-import NavbarIndex from "../components/NavbarIndex";
-import IndexPage from "../views/IndexPage";
-import AboutPage from "../views/AboutPage";
-import CoursesPage from "../views/CoursesPage";
+import Hero from "../components/sections/Hero";
+import "../styles/Home.module.css";
+import Services from "../components/sections/Services";
 
-import ContactUsPage from "../views/ContactUsPage";
-import ChakraNextImage from "../components/ChakraNextImage";
-import { AiOutlineInstagram, AiOutlinePhone } from "react-icons/ai";
-import { HiOutlineMail } from "react-icons/hi";
-import Link from "next/link";
 const Home: NextPage = () => {
-  return (
-    <>
-      <Grid justifyContent="center" overflow="hidden">
-        <NavbarIndex />
+    return (
+        <>
+            <Flex flexDir="column" alignItems="center" className="container">
+                <Hero />
+                <Services />
+            </Flex>
+            {/* Section Hero */}
+            {/* <Flex
+                justifyContent="center"
+                maxW={["100%", "100%", "100%", "100%", "100%", "1600px"]}
+                mx="auto"
+                position="relative"
+                flexDir="column"
+            >
+                <Hero />
+            </Flex>
+
+            <Flex
+                justifyContent="center"
+                maxW={["100%", "100%", "100%", "100%", "100%", "1600px"]}
+                mx="auto"
+                position="relative"
+                flexDir="column"
+                bg="#fff"
+                py="4rem"
+            > */}
+            {/* <NavbarIndex /> */}
+            {/* <Flex gap="4rem" justifyContent="center">
+                    <ChakraNextImage
+                        src="/assets/services.png"
+                        h="470px"
+                        w="450px"
+                        fit="cover"
+                    />
+                    <VStack>
+                        <Flex
+                            flexDir="column"
+                            px="2rem"
+                            fontFamily="secondary"
+                            textAlign="center"
+                        >
+                            <Text fontSize="4xl">
+                                Aprende las últimas técnicas en
+                            </Text>
+                            <Text fontSize="5xl">ARMONIZACIÓN OROFACIAL</Text>
+                        </Flex>
+                        <Text>Aplicá los conocimientos teóricos aprendidos en nuestras tutorias personalizadas.</Text>
+                    </VStack>
+                </Flex> */}
+            {/* </Flex> */}
+            {/* <Flex
+                justifyContent="center"
+                w="100%"
+                maxW={{ base: "100%", md: "80%", lg: "60%" }}
+                mx="auto"
+                px={4}
+                position="relative"
+            >
+                <ChakraNextImage
+                    src="/assets/bg.png"
+                    w="100vw"
+                    h="100%"
+                    maxW="1366px"
+                    position="relative"
+                    fit="cover"
+                />
+
+                <NavbarIndex />
+            </Flex>
+            <Flex w="100vw" h="100vh" bg="red"></Flex>
+ */}
+            {/* <Flex justifyContent="center" position="relative">
+                <Flex>awdwad</Flex>
+                <Flex>
+                    <VStack>
+                        <Text>
+                            INÍCIATE EN EL MUNDO DE LA ARMONIZACIÓN OROFACIAL
+                        </Text>
+                    </VStack>
+                </Flex>
+            </Flex> */}
+            {/* </Flex> */}
+
+            {/*  <NavbarIndex />
         <IndexPage />
         <AboutPage />
         <CoursesPage />
-        <ContactUsPage />
-        <Flex
+        <ContactUsPage /> */}
+            {/* <Flex
           w="100%"
           p="1rem"
           bg="#dedede"
@@ -84,27 +168,26 @@ const Home: NextPage = () => {
               fontSize={["xl", "xl", "2xl", "2xl", "4xl"]}
             />
           </Flex>
-        </Flex>
-      </Grid>
-    </>
-  );
+        </Flex> */}
+        </>
+    );
 };
 
 export async function getServerSideProps() {
-  const session = await getSession();
+    const session = await getSession();
 
-  /* return {
+    /* return {
     redirect: {
       destination: "/login",
       permanent: false,
     },
   }; */
 
-  return {
-    props: {
-      session,
-    },
-  };
+    return {
+        props: {
+            session,
+        },
+    };
 }
 
 export default Home;
