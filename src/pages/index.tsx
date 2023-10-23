@@ -1,19 +1,20 @@
 import {
-    Box,
-    Button,
-    Container,
+    AspectRatio,
     Flex,
-    HStack,
-    Icon,
-    Image,
+    Box,
     Text,
     VStack,
+    Image,
+    Input,
+    HStack,
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { getSession } from "next-auth/react";
 import Hero from "../components/sections/Hero";
 import "../styles/Home.module.css";
 import Services from "../components/sections/Services";
+import CourseCard from "../components/CourseCard";
+import ChakraNextImage from "../components/ChakraNextImage";
 
 const Home: NextPage = () => {
     return (
@@ -21,154 +22,166 @@ const Home: NextPage = () => {
             <Flex flexDir="column" alignItems="center" className="container">
                 <Hero />
                 <Services />
-            </Flex>
-            {/* Section Hero */}
-            {/* <Flex
-                justifyContent="center"
-                maxW={["100%", "100%", "100%", "100%", "100%", "1600px"]}
-                mx="auto"
-                position="relative"
-                flexDir="column"
-            >
-                <Hero />
-            </Flex>
-
-            <Flex
-                justifyContent="center"
-                maxW={["100%", "100%", "100%", "100%", "100%", "1600px"]}
-                mx="auto"
-                position="relative"
-                flexDir="column"
-                bg="#fff"
-                py="4rem"
-            > */}
-            {/* <NavbarIndex /> */}
-            {/* <Flex gap="4rem" justifyContent="center">
-                    <ChakraNextImage
-                        src="/assets/services.png"
-                        h="470px"
-                        w="450px"
-                        fit="cover"
-                    />
-                    <VStack>
-                        <Flex
-                            flexDir="column"
-                            px="2rem"
-                            fontFamily="secondary"
-                            textAlign="center"
-                        >
-                            <Text fontSize="4xl">
-                                Aprende las últimas técnicas en
-                            </Text>
-                            <Text fontSize="5xl">ARMONIZACIÓN OROFACIAL</Text>
-                        </Flex>
-                        <Text>Aplicá los conocimientos teóricos aprendidos en nuestras tutorias personalizadas.</Text>
-                    </VStack>
-                </Flex> */}
-            {/* </Flex> */}
-            {/* <Flex
-                justifyContent="center"
-                w="100%"
-                maxW={{ base: "100%", md: "80%", lg: "60%" }}
-                mx="auto"
-                px={4}
-                position="relative"
-            >
-                <ChakraNextImage
-                    src="/assets/bg.png"
+                <Flex
                     w="100vw"
-                    h="100%"
-                    maxW="1366px"
-                    position="relative"
-                    fit="cover"
-                />
-
-                <NavbarIndex />
-            </Flex>
-            <Flex w="100vw" h="100vh" bg="red"></Flex>
- */}
-            {/* <Flex justifyContent="center" position="relative">
-                <Flex>awdwad</Flex>
-                <Flex>
-                    <VStack>
-                        <Text>
-                            INÍCIATE EN EL MUNDO DE LA ARMONIZACIÓN OROFACIAL
-                        </Text>
-                    </VStack>
+                    maxW="1920px"
+                    justifyContent={[
+                        "center",
+                        "center",
+                        "center",
+                        "center",
+                        "center",
+                    ]}
+                    flexDir={["column", "column", "column", "row", "row"]}
+                    bg="#fff"
+                    gap="4rem"
+                >
+                    <AspectRatio h="500px" w="600px">
+                        <iframe
+                            title="naruto"
+                            src="/assets/video.mp4"
+                            allowFullScreen
+                        />
+                    </AspectRatio>
+                    {/* <Flex w="50%" justifyContent="end">
+                        <AspectRatio w="350px" h="350px">
+                            <iframe
+                                title="naruto"
+                                src="/assets/video.mp4"
+                                allowFullScreen
+                            />
+                        </AspectRatio>
+                    </Flex>
+                    <Flex w="50%">
+                        <Flex flexDir='column' textAlign='center' fontSize='3xl' fontFamily='primary'>
+                            <Text>Aprende las últimas en </Text>
+                            <Text>ARMONIZACIÓN OROFACIAL</Text>
+                        </Flex> 
+                    </Flex> */}
                 </Flex>
-            </Flex> */}
-            {/* </Flex> */}
-
-            {/*  <NavbarIndex />
-        <IndexPage />
-        <AboutPage />
-        <CoursesPage />
-        <ContactUsPage /> */}
-            {/* <Flex
-          w="100%"
-          p="1rem"
-          bg="#dedede"
-          alignItems="center"
-          px="20%"
-          gap="1rem"
-          justifyContent="space-between"
-          flexDir={["column", "column", "row", "row", "row"]}
-        >
-          <Flex
-            gap="1rem"
-            flexDir={{ base: "column", md: "row" }}
-            align="center"
-          >
-            <ChakraNextImage
-              src="/assets/logo.webp"
-              h="90px"
-              w="150px"
-              fit="cover"
-              alt="logo"
-            />
-            <Flex
-              flexDir="column"
-              justifyContent="center"
-              align={{ base: "center", md: "start" }}
-            >
-              <Text
-                fontFamily="secondary"
-                fontSize={["xl", "xl", "xl", "3xl", "3xl"]}
-              >
-                ANDREA FINTEN
-              </Text>
-              <Text
-                fontFamily="primary"
-                fontSize={["md", "md", "md", "md", "md"]}
-                textAlign="center"
-              >
-                © 2023 Andrea Finten. Todos los derechos rervados
-              </Text>
+                <Flex
+                    w="100vw"
+                    maxW="1920px"
+                    justifyContent={[
+                        "center",
+                        "center",
+                        "center",
+                        "center",
+                        "center",
+                    ]}
+                    flexDir={["column", "column", "column", "column", "column"]}
+                    bg="#fff"
+                    pt="5rem"
+                >
+                    <Text
+                        textAlign="center"
+                        fontFamily="primary"
+                        fontSize="2xl"
+                    >
+                        Cursos Disponibles
+                    </Text>
+                    <Flex gap="4rem" py="2rem" justifyContent="center">
+                        <CourseCard
+                            src="/assets/inicial.jpg"
+                            alt="inicial"
+                            title="Acido Hialuronico Inicial"
+                            hours={2}
+                            description="Acido"
+                        />
+                        <CourseCard
+                            src="/assets/avanzado.jpg"
+                            alt="inicial"
+                            title="Acido Hialuronico Inicial"
+                            hours={2}
+                            description="Acido"
+                        />
+                        <CourseCard
+                            src="/assets/toxina.jpg"
+                            alt="inicial"
+                            title="Acido Hialuronico Inicial"
+                            hours={2}
+                            description="Acido"
+                        />
+                    </Flex>
+                </Flex>
+                <Flex
+                    w="100vw"
+                    maxW="1920px"
+                    justifyContent={[
+                        "center",
+                        "center",
+                        "center",
+                        "center",
+                        "center",
+                    ]}
+                    bg="#fff"
+                    py="5rem"
+                >
+                    <Flex w="50%" justifyContent="end">
+                        <VStack>
+                            <Image
+                                src="/assets/flor.png"
+                                h="200px"
+                                fit="cover"
+                            />
+                            <Flex flexDir="column" fontFamily='primary' fontSize='4xl'>
+                                <Text>Andrea</Text>
+                                <Text>Finten</Text>
+                            </Flex>
+                        </VStack>
+                    </Flex>
+                    <Flex w="50%">
+                        <VStack
+                            w="400px"
+                            fontFamily="primary"
+                            textAlign="center"
+                            px="3rem"
+                        >
+                            <Text mb="1rem">
+                                Para saber más información acerca de los cursos,
+                                consultanos por nuestro email o redes sociales!
+                            </Text>
+                            <Input
+                                variant="flushed"
+                                placeholder="Nombre"
+                                fontFamily="secondary"
+                            />
+                            <Input
+                                variant="flushed"
+                                placeholder="Correo"
+                                fontFamily="secondary"
+                            />
+                            <Input
+                                variant="flushed"
+                                placeholder="Mensaje"
+                                fontFamily="secondary"
+                            />
+                            <HStack spacing={10}>
+                                <ChakraNextImage
+                                    src="/icons/wpp.png"
+                                    h="100px"
+                                    w="50px"
+                                    fit="contain"
+                                />
+                                <ChakraNextImage
+                                    src="/icons/ig.png"
+                                    h="100px"
+                                    w="50px"
+                                    fit="contain"
+                                />
+                                <ChakraNextImage
+                                    src="/icons/gmail.png"
+                                    h="100px"
+                                    w="50px"
+                                    fit="contain"
+                                />
+                            </HStack>
+                        </VStack>
+                    </Flex>
+                </Flex>
             </Flex>
-          </Flex>
 
-          <Flex gap="1rem">
-            <Link
-              href=""
-              target="_blank"
-            >
-              <Icon
-                as={AiOutlineInstagram}
-                fontSize={["xl", "xl", "2xl", "2xl", "4xl"]}
-              />
-            </Link>
-
-            <Icon
-              as={HiOutlineMail}
-              fontSize={["xl", "xl", "2xl", "2xl", "4xl"]}
-            />
-
-            <Icon
-              as={AiOutlinePhone}
-              fontSize={["xl", "xl", "2xl", "2xl", "4xl"]}
-            />
-          </Flex>
-        </Flex> */}
+            {/*  */}
         </>
     );
 };

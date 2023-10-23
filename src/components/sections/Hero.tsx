@@ -31,10 +31,10 @@ const Hero: React.FC = () => {
                 }}
             >
                 <Flex flexDir="column" justifyContent="center" maxW="500px">
-                    <Text fontSize="3xl" textAlign="center">
+                    <Text fontSize="3xl" textAlign="center" fontFamily='primary'>
                         INICIATE EN EL MUNDO DE LA
                     </Text>
-                    <Text fontSize="3xl" textAlign="center">
+                    <Text fontSize="3xl" textAlign="center" fontFamily='primary'>
                         ARMONIZACIÓN OROFACIAL
                     </Text>
                     <Text fontFamily="secondary" mt="3rem">
