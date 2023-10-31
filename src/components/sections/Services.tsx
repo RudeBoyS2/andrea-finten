@@ -3,12 +3,13 @@ import React from "react";
 import { MdOutlinePlayLesson } from "react-icons/md";
 import { IoPeopleCircleOutline } from "react-icons/io5";
 import { TbBook2 } from "react-icons/tb";
+import ClientsIcon from "../ClientsIcon";
 const Services: React.FC = () => {
     return (
         <>
             <Flex
-                w="100vw"
                 maxW="1920px"
+                w="100%"
                 justifyContent={[
                     "center",
                     "center",
@@ -25,10 +26,11 @@ const Services: React.FC = () => {
                     gap="2rem"
                     alignItems="center"
                     fontFamily="primary"
+                    justifyContent='center'
                 >
                     <VStack>
                         <Text
-                            fontSize="2xl"
+                            fontSize={["xl", "xl", "xl", "2xl", "2xl"]}
                             w="100%"
                             px="3rem"
                             textAlign="center"
@@ -36,33 +38,21 @@ const Services: React.FC = () => {
                             Accedé al contenido teórico donde y cuando
                         </Text>
                         <Text
-                            fontSize="2xl"
+                            fontSize={["xl", "xl", "xl", "2xl", "2xl"]}
                             w="100%"
                             px="3rem"
                             textAlign="center"
                         >
                             quieras desde el Aula Virtual
                         </Text>
-                        <HStack py="2rem" gap="4rem">
-                            <VStack>
-                                <Icon as={MdOutlinePlayLesson} fontSize="5xl" />
-                                <Text>+100</Text>
-                                <Text>Subscriptores</Text>
-                            </VStack>
-                            <VStack>
-                                <Icon
-                                    as={IoPeopleCircleOutline}
-                                    fontSize="5xl"
-                                />
-                                <Text>+20</Text>
-                                <Text>Cursos</Text>
-                            </VStack>
-                            <VStack>
-                                <Icon as={TbBook2} fontSize="5xl" />
-                                <Text>+30</Text>
-                                <Text>Recursos teóricos</Text>
-                            </VStack>
-                        </HStack>
+                        <Flex
+                            py="2rem"
+                            gap='2rem'
+                        >
+                            <ClientsIcon icon={MdOutlinePlayLesson} text='Subscriptores' number='+100'/>
+                            <ClientsIcon icon={IoPeopleCircleOutline} text='Cursos' number='+20'/>
+                            <ClientsIcon icon={TbBook2} text='Recursos teóricos' number='+30'/>
+                        </Flex>
                     </VStack>
                 </Flex>
             </Flex>

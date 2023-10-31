@@ -32,7 +32,7 @@ const NavbarLinkScroll: React.FC<Props> = ({ path, text }) => {
         //|mx="1"
         //_hover={{ color: "#cf962d" }}
       >
-        <Text >{text}</Text>
+        <Text _hover={{ color: '#944141' }}>{text}</Text>
       </Box>
     </>
   );
