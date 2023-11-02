@@ -10,10 +10,10 @@ const ContactSection: React.FC = () => {
                 maxW="1920px"
                 bg="#fff"
                 py="5rem"
-                flexDir={['column', 'column', 'row', 'row', 'row']}
-                gap='3rem'
-                alignItems='center'
-                id='contact'
+                flexDir={["column", "column", "row", "row", "row"]}
+                gap="3rem"
+                alignItems="center"
+                id="contact"
             >
                 <Flex w="50%" justifyContent="end">
                     <VStack>
@@ -28,13 +28,8 @@ const ContactSection: React.FC = () => {
                         </Flex>
                     </VStack>
                 </Flex>
-                <Flex w="50%" justifyContent='start'>
-                    <VStack
-                        w="400px"
-                        fontFamily="primary"
-                        textAlign="center"
-                        pr='5rem'
->
+                <Flex w="50%" justifyContent="start">
+                    <VStack w="400px" fontFamily="primary" textAlign="center">
                         <Text mb="1rem">
                             Para saber más información acerca de los cursos,
                             consultanos por nuestro email o redes sociales!

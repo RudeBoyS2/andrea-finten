@@ -101,7 +101,7 @@ const NavbarIndex: React.FC = () => {
                         ml="auto"
                         alignSelf="center"
                         onClick={onOpen}
-                        ref={btnRef}
+                       // ref={btnRef}
                         display={["flex", "flex", "none", "none", "none"]}
                     />
                 </Flex>

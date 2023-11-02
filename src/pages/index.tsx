@@ -12,8 +12,6 @@ import type { NextPage } from "next";
 import { getSession } from "next-auth/react";
 import Hero from "../components/sections/Hero";
 import Services from "../components/sections/Services";
-import CourseCard from "../components/CourseCard";
-import ChakraNextImage from "../components/ChakraNextImage";
 import VideoSection from "../components/sections/VideoSection";
 import CoursesSection from "../components/sections/CoursesSection";
 import ContactSection from "../components/sections/ContactSection";
