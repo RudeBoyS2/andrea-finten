@@ -27,8 +27,8 @@ const CourseCard: React.FC<Props> = ({ src, alt, title, hours, description }) =>
             >
                 <ChakraNextImage
                     src={src}
-                    w="300px"
-                    h="300px"
+                    w="250px"
+                    h="250px"
                     alt={alt}
                     fit="cover"
                 />
