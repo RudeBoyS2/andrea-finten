@@ -11,7 +11,6 @@ import {
 import type { NextPage } from "next";
 import { getSession } from "next-auth/react";
 import Hero from "../components/sections/Hero";
-import "../styles/Home.module.css";
 import Services from "../components/sections/Services";
 import CourseCard from "../components/CourseCard";
 import ChakraNextImage from "../components/ChakraNextImage";
@@ -40,11 +39,11 @@ const Home: NextPage = () => {
 export async function getServerSideProps() {
     const session = await getSession();
     
-    // return {
-    //     props: {
-    //         session,
-    //     },
-    // };
+    return {
+        props: {
+            session,
+        },
+    };
   }
 
 export default Home;
