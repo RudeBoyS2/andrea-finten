@@ -53,11 +53,11 @@ const Hero: React.FC = () => {
                         desarrollar y aplicar en tu consultorio los mejores
                         tratamientos de Armonización Orofacial
                     </Text>
-                    <Flex mt="2rem" justifyContent="start" gap="2rem">
-                        <Button bg="#944141" color="#fff">
+                    <Flex mt="2rem" justifyContent="start" gap="2rem" flexDir='row-reverse'>
+                        <Button bg="#dedede" color="#202020" _hover={{ transform: 'scale(1.1)' }} _active={{}}>
                             Consultar
                         </Button>
-                        <Button>Ver Más</Button>
+                        <Button bg='secondary' color='#fff' _hover={{ transform: 'scale(1.1)' }} _active={{}}>Ver cursos</Button>
                     </Flex>
                 </Flex>
                 <Flex justifyContent='center'>

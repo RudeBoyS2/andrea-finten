@@ -1,4 +1,4 @@
-import { Flex, Icon, Text } from "@chakra-ui/react";
+import { Flex, Icon, Image, Text } from "@chakra-ui/react";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { FaPhotoVideo } from "react-icons/fa";
 import ChakraNextImage from "./ChakraNextImage";
@@ -25,7 +25,7 @@ const CourseCard: React.FC<Props> = ({ src, alt, title, hours, description }) =>
                     boxShadow: "5px 5px 10px 0px #606060",
                 }}
             >
-                <ChakraNextImage
+                <Image
                     src={src}
                     w="250px"
                     h="250px"

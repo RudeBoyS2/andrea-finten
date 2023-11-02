@@ -32,7 +32,7 @@ const NavbarIndex: React.FC = () => {
                         textAlign="center"
                         alignSelf="center"
                         fontSize="2xl"
-                        fontFamily="secondary"
+                        fontFamily="primary"
                     >
                         Andrea Finten
                     </Text>

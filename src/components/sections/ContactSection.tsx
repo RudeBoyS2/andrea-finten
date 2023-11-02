@@ -16,7 +16,7 @@ const ContactSection: React.FC = () => {
             >
                 <Flex w="50%" justifyContent="end">
                     <VStack>
-                        <Image src="/assets/flor.png" h="200px" fit="cover" />
+                        <Image src="/assets/flor.png" h="200px" fit="contain" />
                         <Flex
                             flexDir="column"
                             fontFamily="primary"
@@ -27,7 +27,7 @@ const ContactSection: React.FC = () => {
                         </Flex>
                     </VStack>
                 </Flex>
-                <Flex w="50%">
+                <Flex w="50%" justifyContent='center'>
                     <VStack
                         w="400px"
                         fontFamily="primary"
