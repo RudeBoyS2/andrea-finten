@@ -29,6 +29,7 @@ const Hero: React.FC = () => {
                 gap="5rem"
                 justifyItems="center"
                 py='3rem'
+                id='index'
             >
                 <Flex
                     flexDir="column"

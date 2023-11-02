@@ -19,6 +19,7 @@ const Services: React.FC = () => {
                 ]}
                 flexDir={["column", "column", "column", "row", "row"]}
                 bg="#fff"
+                id='services'
             >
                 <Flex
                     py="2rem"

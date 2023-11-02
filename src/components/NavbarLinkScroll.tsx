@@ -6,9 +6,10 @@ import styles from "../styles/ActiveClass.module.css";
 type Props = {
   path: string;
   text: string;
+  callback?: () => void
 };
 
-const NavbarLinkScroll: React.FC<Props> = ({ path, text }) => {
+const NavbarLinkScroll: React.FC<Props> = ({ path, text, callback }) => {
   const router = useRouter();
   const theme = useTheme();
   return (
@@ -20,7 +21,7 @@ const NavbarLinkScroll: React.FC<Props> = ({ path, text }) => {
         smooth={true}
         duration={500}
         cursor='pointer'
-        
+        onClick={callback}
         // @ts-ignore
         activeStyle={{
           color: theme.colors.primary,

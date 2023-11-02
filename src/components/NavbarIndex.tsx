@@ -1,16 +1,47 @@
-import { Flex, HStack, Icon, Text } from "@chakra-ui/react";
+import {
+    Button,
+    Drawer,
+    DrawerCloseButton,
+    DrawerContent,
+    DrawerFooter,
+    DrawerOverlay,
+    Flex,
+    HStack,
+    Icon,
+    Text,
+    useDisclosure,
+} from "@chakra-ui/react";
 
 import ChakraNextImage from "./ChakraNextImage";
 import { useTheme } from "@emotion/react";
 import NavbarLinkScroll from "./NavbarLinkScroll";
 import { FaBars } from "react-icons/fa";
+import { useRef } from "react";
 
 const NavbarIndex: React.FC = () => {
     const theme: any = useTheme();
+    const btnRef = useRef();
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    
+    const handler = () => {
+        onClose()
+    }
     return (
         <>
+            <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+                <DrawerOverlay />
+                <DrawerContent>
+                    <DrawerCloseButton />
+                    <Flex flexDir="column" w='100%' h='100vh' justifyContent='center'  fontSize='2xl' px='2rem' gap='5rem'>
+                        <NavbarLinkScroll text="Inicio" path="index" callback={() => handler()}/>
+                        <NavbarLinkScroll text="Servicios" path="services" callback={() => handler()}/>
+                        <NavbarLinkScroll text="Cursos" path="courses" callback={() => handler()}/>
+                        <NavbarLinkScroll text="Contacto" path="contact" callback={() => handler()}/>
+                    </Flex>
+                </DrawerContent>
+            </Drawer>
             {/* Desktop navbar */}
-            <Flex w="100%" justifyContent="center">
+            <Flex w="100%" justifyContent="center" >
                 <Flex
                     alignContent="center"
                     w="100%"
@@ -18,7 +49,7 @@ const NavbarIndex: React.FC = () => {
                     px="2rem"
                     boxShadow="0px 0px 10px 5px #cac9c9"
                     justifySelf="center"
-                    position="absolute"
+                    position="fixed"
                     zIndex="100"
                     top="0"
                 >
@@ -29,6 +60,7 @@ const NavbarIndex: React.FC = () => {
                         fit="contain"
                     />
                     <Text
+                    ml='2rem'
                         textAlign="center"
                         alignSelf="center"
                         fontSize="2xl"
@@ -44,7 +76,7 @@ const NavbarIndex: React.FC = () => {
                         fontSize="md"
                         display={["none", "none", "flex", "flex", "flex"]}
                     >
-                        <NavbarLinkScroll text="Inicio" path="index" />
+                        <NavbarLinkScroll text="Inicio" path="index"  />
                         <NavbarLinkScroll text="Servicios" path="services" />
                         <NavbarLinkScroll text="Cursos" path="courses" />
                         <NavbarLinkScroll text="Contacto" path="contact" />
@@ -68,6 +100,8 @@ const NavbarIndex: React.FC = () => {
                         fontSize="2xl"
                         ml="auto"
                         alignSelf="center"
+                        onClick={onOpen}
+                        ref={btnRef}
                         display={["flex", "flex", "none", "none", "none"]}
                     />
                 </Flex>

@@ -11,6 +11,7 @@ const CoursesSection: React.FC = () => {
                 flexDir="column"
                 bg="#fff"
                 pt="5rem"
+                id='courses'
             >
                 <Text textAlign="center" fontFamily="primary" fontSize="2xl">
                     Cursos Disponibles
