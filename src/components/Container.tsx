@@ -11,11 +11,9 @@ const Container: React.FC<Props> = ({ open, setOpen, children }) => {
     return (
         <>
             <Flex
-                // h="87vh"
                 w="100vw"
-                ml={open ? "15rem" : "4rem"}
+                ml={open ? "15rem" : "5rem"}
                 transition="all .5s ease"
-                mt="80px"
                 flexDir='column'
             >
                 {children}

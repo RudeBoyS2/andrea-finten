@@ -33,7 +33,6 @@ const NavbarIndex: React.FC = () => {
                 h="80px"
                 display={['none', 'none', 'none', 'flex', 'flex']}
                 bg="#f1f2f3"
-                // justifyContent="flex-end"
                 alignItems="center"
                 px="5rem"
                 gap="2rem"
@@ -43,7 +42,7 @@ const NavbarIndex: React.FC = () => {
                 fontSize="xl"
             >
                 <ChakraNextImage
-                    src="/assets/logo.webp"
+                    src="/assets/logo.png"
                     h="63px"
                     w="100px"
                     alt="logo"
@@ -92,7 +91,7 @@ const NavbarIndex: React.FC = () => {
                 alignItems='center'
             >
                 <ChakraNextImage
-                    src="/assets/logo.webp"
+                    src="/assets/logo.png"
                     h="40px"
                     w="80px"
                     alt="logo"

@@ -68,13 +68,13 @@ const TableCourses: React.FC<Props> = ({
         pdfs={pdfs}
       />
       <AddButton onOpen={onOpen} title="Agregar PDF" />
-      <TableContainer w="100%">
+      <TableContainer w="100%" overflow="auto">
         <Table variant="simple">
           <Thead>
             <Tr>
-              <Th>Titulo</Th>
-              <Th>Del curso</Th>
-              <Th>Borrar</Th>
+              <Th w="33.3%">Titulo</Th>
+              <Th w="33.3%">Del curso</Th>
+              <Th w="33.3%">Borrar</Th>
             </Tr>
           </Thead>
           <Tbody>
@@ -100,9 +100,9 @@ const TableCourses: React.FC<Props> = ({
                   }}
                 >
                   <>
-                    <Td>{pdf?.pdfTitle}</Td>
-                    <Td>{courseOfPdfTitle}</Td>
-                    <Td>
+                    <Td w="33.3%">{pdf?.pdfTitle}</Td>
+                    <Td w="33.3%">{courseOfPdfTitle}</Td>
+                    <Td w="33.3%">
                       <Icon
                         as={BsTrash}
                         fontSize="2xl"

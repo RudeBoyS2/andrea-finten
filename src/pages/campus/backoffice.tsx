@@ -56,11 +56,11 @@ const Backoffice: React.FC = () => {
   return (
     <>
       <Navbar />
-      <Flex w="100%" h="100vh">
+      <Flex w="100%" h="88%">
         <Sidebar open={open} setOpen={setOpen} />
         <Container open={open} setOpen={setOpen}>
-          <Flex flexDir="column">
-            <Flex w="100%" py="2rem" gap="3rem" px="2rem">
+          <Flex flexDir="column" h="100%">
+            <Flex w="100%" py="2rem" gap="3rem" px="5">
               <BackofficeItem
                 icon={AiOutlineUsergroupAdd}
                 text="Usuarios"
@@ -123,7 +123,6 @@ export async function getServerSideProps(context: any) {
     role = data.data.role;
   }
 
-  console.log(role);
   if (role !== "admin") {
     return {
       redirect: {

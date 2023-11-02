@@ -93,7 +93,15 @@ const ModalTopic: React.FC<Props> = ({
                           />
                         </FormControl>
 
-                        <Button type="submit" colorScheme="green" width="full">
+                        <Button
+                          type="submit"
+                          fontFamily="secondary"
+                          color="white"
+                          bg="secondary"
+                          _hover={{ bg: "primary" }}
+                          _active={{ bg: "primary" }}
+                          width="full"
+                        >
                           Crear
                         </Button>
                       </VStack>

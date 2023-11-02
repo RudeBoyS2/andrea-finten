@@ -7,6 +7,7 @@ type Props = {
 };
 
 const MediaPlayer: React.FC<Props> = ({ url, title }) => {
+  console.log(url, "url")
   return (
     <>
       <Heading as="h3" my="6" ml={{base: 2, md: "4", "2xl": "8"}} size={{sm: "md", md: "lg", xl:"xl"}} fontWeight="bold" color="#000">
@@ -17,12 +18,10 @@ const MediaPlayer: React.FC<Props> = ({ url, title }) => {
           allow="autoplay"
           allowFullScreen
           allowTransparency
-          frameBorder="0"
           src={url}
-          scrolling="no"
           name="videoPlayer"
           style={{ width: "95%", height: "95%", margin: "auto" }}
-        ></iframe>
+        />
       </Box>
 
       {/*             <div style="position:relative; width:1px; min-width:100%;padding-bottom:56.25%;">

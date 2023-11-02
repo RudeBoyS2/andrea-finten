@@ -24,34 +24,34 @@ const ContactUsPage: React.FC = () => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     setAlreadySubmitted(true);
-    emailjs
-      .send(
-        `${process.env.NEXT_PUBLIC_SERVICE_KEY}`,
-        "template_52sowpt",
-        templateParams,
-        `${process.env.NEXT_PUBLIC_API_KEY}`
-      )
-      .then(
-        (result) => {
-          toast({
-            title: "Mensaje enviado",
-            description: "Nos pondremos en contacto a la brevedad",
-            status: "success",
-            duration: 5000,
-            isClosable: true,
-          });
-        },
-        (error) => {
-          console.log(error.text);
-          toast({
-            title: "Error",
-            description: "Hubo un error al enviar el mensaje",
-            status: "error",
-            duration: 5000,
-            isClosable: true,
-          });
-        }
-      );
+    // emailjs
+    //   .send(
+    //     `${process.env.NEXT_PUBLIC_SERVICE_KEY}`,
+    //     "template_52sowpt",
+    //     templateParams,
+    //     `${process.env.NEXT_PUBLIC_API_KEY}`
+    //   )
+    //   .then(
+    //     (result) => {
+    //       toast({
+    //         title: "Mensaje enviado",
+    //         description: "Nos pondremos en contacto a la brevedad",
+    //         status: "success",
+    //         duration: 5000,
+    //         isClosable: true,
+    //       });
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //       toast({
+    //         title: "Error",
+    //         description: "Hubo un error al enviar el mensaje",
+    //         status: "error",
+    //         duration: 5000,
+    //         isClosable: true,
+    //       });
+    //     }
+    //   );
   };
 
   return (

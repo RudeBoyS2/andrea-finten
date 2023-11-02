@@ -19,15 +19,19 @@ const SidebarLink: React.FC<Props> = ({
     display,
     onClick,
 }) => {
-    const router = useRouter().pathname;
+    const router = useRouter();
+    const pathname = router.pathname;
+
+    const activeColor = path === pathname ? "tertiary" : "white"
 
     return (
         <>
             <Link href={path} onClick={onClick}>
                 <Flex
                     justifyContent="start"
+                    align="center"
                     gap="1rem"
-                    pl="1rem"
+                    pl="1.4rem"
                     position='relative'
                     _before={{
                         content: `""`,
@@ -41,20 +45,18 @@ const SidebarLink: React.FC<Props> = ({
                     <Icon
                         as={icon}
                         alignSelf="center"
-                        fontSize="2xl"
-                        fill='tertiary'
-
+                        fontSize="4xl"
+                        fill={activeColor}
                     />
                     <Text
                         fontFamily="secondary"
-                        color="#fff"
+                        color={activeColor}
                         _hover={{
-                            color: '#dedede'
+                            color: 'primary'
                         }}
-                        alignSelf="center"
                         display={display ? "block" : "none"}
-                        fontSize="sm"
-                        
+                        fontSize="md"
+                        transition="all 0.5s ease"
                     >
                         {text}
                     </Text>

@@ -17,12 +17,13 @@ const AddButton: React.FC<Props> = ({ onOpen, title }) => {
                     px="1rem"
                     py=".5rem"
                     w="160px"
-                    h="50px"
+                    h="43px"
                     rounded="20px"
                     transition="all .2s ease"
                     border={`1px solid ${theme.colors.primary}`}
                     bg="#f1f2f3"
-                    fontFamily="primary"
+                    fontFamily="secondary"
+                    fontWeight="normal"
                     onClick={onOpen}
                 >
                     {title}

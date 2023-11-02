@@ -54,18 +54,18 @@ const TableUser: React.FC<Props> = ({ users, setUsers }) => {
       />
 
       <AddButton onOpen={onOpen} title="Agregar Usuario" />
-      <TableContainer w="100%">
-        <Table variant="simple">
-          <Thead>
+      <TableContainer w="100%" overflowY="auto" pl={isOpen ? "0" : "0"}>
+        <Table variant="striped" bg="primary">
+          <Thead position="sticky" top="0" zIndex="100" bg="primary">
             <Tr>
-              <Th>Avatar</Th>
-              <Th>Nombre</Th>
-              <Th>Correo</Th>
-              <Th>Editar</Th>
-              <Th>Borrar</Th>
+              <Th w="20%" fontSize="md" color="black">Avatar</Th>
+              <Th w="20%" fontSize="md" color="black">Nombre</Th>
+              <Th w="20%" fontSize="md" color="black">Correo</Th>
+              <Th w="20%" fontSize="md" color="black">Editar</Th>
+              <Th w="20%" fontSize="md" color="black">Borrar</Th>
             </Tr>
           </Thead>
-          <Tbody>
+          <Tbody fontSize="lg">
             {users?.map((user, index) => {
               return (
                 <Tr
@@ -82,7 +82,7 @@ const TableUser: React.FC<Props> = ({ users, setUsers }) => {
                   }}
                 >
                   <>
-                    <Td>
+                    <Td w="20%">
                       <Image
                         src={"/profile.svg"}
                         alt="user avatar"
@@ -93,27 +93,29 @@ const TableUser: React.FC<Props> = ({ users, setUsers }) => {
                         }}
                       />
                     </Td>
-                    <Td>{user.name}</Td>
-                    <Td>{user.email}</Td>
-                    <Td>
+                    <Td w="20%">{user.name}</Td>
+                    <Td w="20%">{user.email}</Td>
+                    <Td w="20%">
                       <Icon
                         as={ImNewTab}
                         cursor="pointer"
-                        fontSize="2xl"
+                        fontSize="3xl"
+                        ml="3"
                         onClick={() => {
                           Router.push(`/users/${user._id}`);
                         }}
-                        _hover={{ color: "#cf962d" }}
+                        _hover={{ color: "secondary" }}
                       />
                     </Td>
-                    <Td>
-                      {user.email !== "admin@admin.com" && (
+                    <Td w="20%">
+                      {user.email !== "admin@test.com" && (
                         <Icon
                           as={BsTrash}
                           cursor="pointer"
-                          fontSize="2xl"
+                          fontSize="3xl"
+                          ml="4"
                           onClick={() => onDelete(user._id)}
-                          _hover={{ color: "#cf962d" }}
+                          _hover={{ color: "secondary" }}
                         />
                       )}
                     </Td>

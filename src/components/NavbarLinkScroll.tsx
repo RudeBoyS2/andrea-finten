@@ -27,10 +27,6 @@ const NavbarLinkScroll: React.FC<Props> = ({ path, text }) => {
           fontWeight: 'bold',
           transition: 'all 0.2s ease'
         }}
-        //cursor="pointer"
-        //fontSize="lg"
-        //|mx="1"
-        //_hover={{ color: "#cf962d" }}
       >
         <Text >{text}</Text>
       </Box>

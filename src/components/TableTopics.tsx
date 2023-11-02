@@ -59,12 +59,12 @@ const TableTopics: React.FC<Props> = ({ topics, setTopics }) => {
             />
 
             <AddButton onOpen={onOpen} title="Agregar Tema" />
-            <TableContainer w="100%">
+            <TableContainer w="100%" overflow="auto">
                 <Table variant="simple">
                     <Thead>
                         <Tr>
-                            <Th>Titulo</Th>
-                            <Th>Titulo</Th>
+                            <Th w="50%">Titulo</Th>
+                            <Th w="50%">Borrar</Th>
                         </Tr>
                     </Thead>
                     <Tbody>
@@ -84,8 +84,8 @@ const TableTopics: React.FC<Props> = ({ topics, setTopics }) => {
                                       }}
                                 >
                                     <>
-                                        <Td>{topic?.title}</Td>
-                                        <Td>
+                                        <Td w="50%">{topic?.title}</Td>
+                                        <Td w="50%">
                                             <Icon
                                                 as={BsTrash}
                                                 fontSize="2xl"

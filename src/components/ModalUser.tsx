@@ -69,7 +69,7 @@ const ModalUser: React.FC<Props> = ({ onClose, isOpen, setUsers, users }) => {
                   {({ handleSubmit, errors, touched }) => (
                     <form onSubmit={handleSubmit}>
                       <VStack spacing={4} align="flex-start">
-                        <FormControl>
+                        <FormControl isRequired>
                           <FormLabel htmlFor="name">Nombre</FormLabel>
                           <Field
                             as={Input}
@@ -79,7 +79,7 @@ const ModalUser: React.FC<Props> = ({ onClose, isOpen, setUsers, users }) => {
                             variant="filled"
                           />
                         </FormControl>
-                        <FormControl>
+                        <FormControl isRequired>
                           <FormLabel htmlFor="email">Correo</FormLabel>
                           <Field
                             as={Input}
@@ -92,6 +92,7 @@ const ModalUser: React.FC<Props> = ({ onClose, isOpen, setUsers, users }) => {
                         </FormControl>
                         <FormControl
                           isInvalid={!!errors.password && touched.password}
+                          isRequired
                         >
                           <FormLabel htmlFor="password">Contraseña</FormLabel>
                           <Field
@@ -116,7 +117,10 @@ const ModalUser: React.FC<Props> = ({ onClose, isOpen, setUsers, users }) => {
                         <Button
                           type="submit"
                           fontFamily="secondary"
-                          colorScheme="green"
+                          color="white"
+                          bg="secondary"
+                          _hover={{ bg: "primary" }}
+                          _active={{ bg: "primary" }}
                           width="full"
                         >
                           Crear

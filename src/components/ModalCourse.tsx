@@ -22,7 +22,6 @@ import { Field, Formik } from "formik";
 import React, { useEffect } from "react";
 import API from "../utils/API";
 import { Course, Topic } from "../../types";
-import { AxiosResponse } from "axios";
 
 type Props = {
   isOpen: boolean;
@@ -128,7 +127,15 @@ const ModalCourse: React.FC<Props> = ({
                             required={true}
                           />
                         </FormControl>
-                        <Button type="submit" colorScheme="green" width="full">
+                        <Button
+                          type="submit"
+                          fontFamily="secondary"
+                          color="white"
+                          bg="secondary"
+                          _hover={{ bg: "primary" }}
+                          _active={{ bg: "primary" }}
+                          width="full"
+                        >
                           Crear
                         </Button>
                       </VStack>

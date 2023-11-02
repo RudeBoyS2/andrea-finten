@@ -55,7 +55,7 @@ const Login: NextPage = (props) => {
       <Flex h="100vh" w="100vw" m="0" flexDir="column">
         <Flex
           w="100vw"
-          h="80px"
+          h="120px"
           bg="#f1f2f3"
           alignItems="center"
           px={{ base: "1.5rem", md: "5rem" }}
@@ -65,9 +65,9 @@ const Login: NextPage = (props) => {
           fontSize="xl"
         >
           <ChakraNextImage
-            src="/assets/logo.webp"
-            h="63px"
-            w="100px"
+            src="/assets/logo.png"
+            h="85px"
+            w="150px"
             alt="logo"
             mr="10"
             fit="contain"
@@ -88,7 +88,7 @@ const Login: NextPage = (props) => {
         </Flex>
         <Flex
           justifyContent="center"
-          bg="linear-gradient(143deg, rgba(40,110,84,1) 16%, rgba(31,59,49,1) 100%)"
+          bg="linear-gradient(90deg, rgba(205,141,142,1) 0%, rgba(168,64,65,1) 65%)"
           w="100%"
           h="100%"
         >
@@ -153,7 +153,7 @@ const Login: NextPage = (props) => {
                         <Button
                           isLoading={loading}
                           type="submit"
-                          bg="linear-gradient(143deg, rgba(40,110,84,1) 16%, rgba(31,59,49,1) 100%)"
+                          bg="linear-gradient(90deg, rgba(179,87,88,1) 20%, rgba(173,75,76,1) 80%)"
                           _hover={{
                             bg: "white",
                             color: "primary",

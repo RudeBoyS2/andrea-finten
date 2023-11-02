@@ -58,13 +58,13 @@ const TableCourses: React.FC<Props> = ({ courses, setCourses }) => {
       />
 
       <AddButton onOpen={onOpen} title="Agregar Curso" />
-      <TableContainer w="100%">
+      <TableContainer w="100%" overflow="auto">
         <Table variant="simple">
           <Thead>
             <Tr>
-              <Th>Titulo</Th>
-              <Th>Tema</Th>
-              <Th>Borrar</Th>
+              <Th w="33.3%">Titulo</Th>
+              <Th w="33.3%">Tema</Th>
+              <Th w="33.3%">Borrar</Th>
             </Tr>
           </Thead>
           <Tbody>
@@ -84,9 +84,9 @@ const TableCourses: React.FC<Props> = ({ courses, setCourses }) => {
                   }}
                 >
                   <>
-                    <Td>{course?.title}</Td>
-                    <Td>{course?.topic}</Td>
-                    <Td>
+                    <Td w="33.3%">{course?.title}</Td>
+                    <Td w="33.3%">{course?.topic}</Td>
+                    <Td w="33.3%">
                       <Icon
                         as={BsTrash}
                         fontSize="2xl"

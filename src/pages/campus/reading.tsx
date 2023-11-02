@@ -50,7 +50,7 @@ const Courses: React.FC = () => {
   return (
     <>
       <Navbar />
-      <Flex w="100%" bg="#f1f2f3" minH="100vh" overflow="hidden">
+      <Flex w="100%" h="88%" bg="#f1f2f3" overflow="hidden">
         <Sidebar open={open} setOpen={setOpen} />
         <Container open={open} setOpen={setOpen}>
           <Flex

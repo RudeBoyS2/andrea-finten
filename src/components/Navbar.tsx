@@ -17,20 +17,19 @@ const Navbar: React.FC = () => {
         <>
             <Flex
                 w="100%"
-                h="80px"
+                h="12%"
                 justifyContent="center"
                 px={{base: "1.5rem", md: "5rem"}}
-                alignContent="center"
-                position="fixed"
+                align="center"
+                borderBottom="1px solid #e2e8f0"
                 bg="#f1f2f3"
-                boxShadow="lg"
                 zIndex="100"
             >
                 <ChakraNextImage
-                    src="/assets/logo.webp"
+                    src="/assets/logo.png"
                     alt="logo"
-                    h="63px"
-                    w="100px"
+                    h="70px"
+                    w="140px"
                     alignSelf="center"
                     onClick={() => {
                         router.push("/campus");

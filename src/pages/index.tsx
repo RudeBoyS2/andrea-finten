@@ -14,7 +14,7 @@ import Link from "next/link";
 const Home: NextPage = () => {
   return (
     <>
-      <Grid justifyContent="center" overflow="hidden">
+      {/* <Grid justifyContent="center" overflow="hidden">
         <NavbarIndex />
         <IndexPage />
         <AboutPage />
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
             align="center"
           >
             <ChakraNextImage
-              src="/assets/logo.webp"
+              src="/assets/logo.png"
               h="90px"
               w="150px"
               fit="cover"
@@ -85,7 +85,7 @@ const Home: NextPage = () => {
             />
           </Flex>
         </Flex>
-      </Grid>
+      </Grid> */}
     </>
   );
 };
@@ -93,12 +93,12 @@ const Home: NextPage = () => {
 export async function getServerSideProps() {
   const session = await getSession();
 
-  /* return {
+  return {
     redirect: {
       destination: "/login",
       permanent: false,
     },
-  }; */
+  };
 
   return {
     props: {

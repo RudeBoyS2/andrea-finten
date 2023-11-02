@@ -4,7 +4,7 @@ import "@fontsource/merriweather-sans/";
 const theme = extendTheme({
   styles: {
     global: {
-      "html, body, #root, main": {
+      "html, body, #root, main, #__next": {
         height: "100%",
         width: "100%",
         bg: "#f1f2f3",
@@ -12,10 +12,10 @@ const theme = extendTheme({
     },
   },
   colors: {
-    primary: "#025940",
-    secondary: "#037070",
-    tertiary: "#adbfa8",
-    background: "#dedede",
+    primary: "#CD8D8E",
+    secondary: "#944141",
+    tertiary: "#B3AC8F",
+    background: "#B3AC8F",
     font: "#dedede",
     fontSecondary: "#202020",
   },

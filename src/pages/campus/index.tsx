@@ -21,24 +21,26 @@ const Home: NextPage = () => {
   return (
     <>
       <Navbar />
-      <Flex w="100%" bg="#f1f2f3">
+      <Flex w="100%" h="88%" bg="#f1f2f3">
         <Sidebar open={open} setOpen={setOpen} />
         {/* <IndexLayout /> */}
         <Container open={open} setOpen={setOpen}>
-          <Flex flexDirection="column" align="center">
+          <Flex flexDirection="column" align="center" h="100%" bg="yellow">
             <Flex
-              bgColor="tertiary"
+              bgColor="primary"
               w="100%"
-              h="120px"
+              h="18%"
+              minH="18%"
               align="center"
               justify="center"
               zIndex="0"
               boxShadow="lg"
             ></Flex>
             <Flex
-              mt="-12"
+              mt="-4.5rem"
               w="90%"
-              h="10rem"
+              h="17%"
+              minH="17%"
               bgColor="white"
               zIndex="2"
               borderRadius="md"
@@ -55,39 +57,8 @@ const Home: NextPage = () => {
                 Bienvenido/a {session?.user?.name}!
               </Heading>
             </Flex>
-            <Flex my={{base: "10", md: "20"}} gap="8" w="100%" align="center" justify="space-evenly" flexDir={{base: "column", md: "row"}}>
-              <Button                
-                bg="bg"
-                color="white"
-                _hover={{
-                  bg: "bg",
-                }}
-                _active={{ bg: "bg" }}
-                onClick={() => router.push("/campus/courses")}
-                w={{base: "48", xl: "96"}}
-                h={{base: "48", xl: "96"}}
-                p="0"
-                position="relative"              
-              >
-                <ChakraNextImage src="/client.jpg" alt="Ir a cursos" h="100%" w="100%" filter='auto' blur='6px' transition="ease 0.3s" _hover={{blur: "8px", transition: "ease 0.2s"}} />
-                <Text  position="absolute" fontSize={{base: "4xl", xl: "7xl"}} color="#fff">Cursos</Text>
-              </Button>
-              <Button                
-                bg="bg"
-                color="white"
-                _hover={{
-                  bg: "bg",
-                }}
-                _active={{ bg: "bg" }}
-                onClick={() => router.push("/campus/reading")}
-                w={{base: "48", xl: "96"}}
-                h={{base: "48", xl: "96"}}
-                p="0"
-                position="relative"              
-              >
-                <ChakraNextImage src="/client3.jpg" alt="Ir a cursos" h="100%" w="100%" filter='auto' blur='6px' transition="ease 0.3s" _hover={{blur: "8px", transition: "ease 0.2s"}} />
-                <Text  position="absolute" fontSize={{base: "4xl", xl: "7xl"}} color="#fff">Lectura</Text>
-              </Button>              
+            <Flex my={{base: "10", md: "20"}} gap="8" h="65%" w="100%" align="center" justify="space-evenly" flexDir={{base: "column", md: "row"}} bg="green">
+              
             </Flex>
           </Flex>
         </Container>
