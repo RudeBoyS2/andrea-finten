@@ -2,8 +2,8 @@ import { Flex, HStack, Icon, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import { MdOutlinePlayLesson } from "react-icons/md";
 import { IoPeopleCircleOutline } from "react-icons/io5";
-import { TbBook2 } from "react-icons/tb";
 import ClientsIcon from "../ClientsIcon";
+import { FaGraduationCap } from "react-icons/fa";
 const Services: React.FC = () => {
     return (
         <>
@@ -18,16 +18,16 @@ const Services: React.FC = () => {
                     "center",
                 ]}
                 flexDir={["column", "column", "column", "row", "row"]}
-                bg="#fff"
-                id='services'
+                id="services"
+                bg='#fff'
             >
                 <Flex
-                    py="2rem"
+                    py="4rem"
                     pb="4rem"
                     gap="2rem"
                     alignItems="center"
                     fontFamily="primary"
-                    justifyContent='center'
+                    justifyContent="center"
                 >
                     <VStack>
                         <Text
@@ -46,15 +46,39 @@ const Services: React.FC = () => {
                         >
                             quieras desde el Aula Virtual
                         </Text>
-                        <Flex
-                            py="2rem"
-                            gap='2rem'
-                        >
-                            <ClientsIcon icon={MdOutlinePlayLesson} text='Subscriptores' number='+100'/>
-                            <ClientsIcon icon={IoPeopleCircleOutline} text='Cursos' number='+20'/>
-                            <ClientsIcon icon={TbBook2} text='Recursos teóricos' number='+30'/>
-                        </Flex>
                     </VStack>
+                </Flex>
+            </Flex>
+            <Flex
+                maxW="1920px"
+                w="100%"
+                justifyContent={[
+                    "center",
+                    "center",
+                    "center",
+                    "center",
+                    "center",
+                ]}
+                flexDir={["column", "column", "column", "row", "row"]}
+                bg="secondary"
+                id="services"
+            >
+                <Flex py="2rem" gap="4rem" fontFamily='primary' >
+                    <ClientsIcon
+                        icon={IoPeopleCircleOutline }
+                        text="Subscriptores"
+                        number="+100"
+                    />
+                    <ClientsIcon
+                        icon={FaGraduationCap}
+                        text="Cursos"
+                        number="+20"
+                    />
+                    <ClientsIcon
+                        icon={MdOutlinePlayLesson}
+                        text="Recursos teóricos"
+                        number="+30"
+                    />
                 </Flex>
             </Flex>
         </>

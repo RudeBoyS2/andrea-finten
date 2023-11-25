@@ -90,7 +90,12 @@ const NavbarIndex: React.FC = () => {
                         py=".5rem"
                         h="40px"
                         rounded="50px"
-                        bg="#944141"
+                        cursor='pointer'
+                        transition='all .2s ease'
+                        _hover={{
+                            transform: 'scale(1.02)'
+                        }}
+                        bg="secondary"
                         boxShadow="0px 0px 5px 3px #dedede"
                     >
                         <Text color="#fff">Iniciar sesión</Text>

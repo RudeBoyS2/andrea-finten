@@ -1,4 +1,4 @@
-import { Flex, HStack, Image, Input, Text, VStack } from "@chakra-ui/react";
+import { Button, Flex, HStack, Image, Input, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import ChakraNextImage from "../ChakraNextImage";
 
@@ -8,7 +8,7 @@ const ContactSection: React.FC = () => {
             <Flex
                 w="100%"
                 maxW="1920px"
-                bg="#fff"
+                bg="#F2F1EC"
                 py="5rem"
                 flexDir={["column", "column", "row", "row", "row"]}
                 gap="3rem"
@@ -29,7 +29,7 @@ const ContactSection: React.FC = () => {
                     </VStack>
                 </Flex>
                 <Flex w="50%" justifyContent="start">
-                    <VStack w="400px" fontFamily="primary" textAlign="center">
+                    <VStack w="400px" fontFamily="primary" textAlign="center" bg='#fff' p='2rem' rounded='10px'>
                         <Text mb="1rem">
                             Para saber más información acerca de los cursos,
                             consultanos por nuestro email o redes sociales!

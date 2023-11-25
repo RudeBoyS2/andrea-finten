@@ -7,11 +7,11 @@ const VideoSection: React.FC = () => {
             <Flex
                 w="100%"
                 maxW="1920px"
-
                 bg="#fff"
                 gap="4rem"
                 justifyContent='center'
                 px='1rem'
+                pt='10rem'
             >
                 <AspectRatio h="auto" maxH='500px' maxW='600px' w="100%" justifyContent='center' >
                     <iframe
