@@ -71,7 +71,7 @@ const NavbarIndex: React.FC = () => {
 
                     <HStack
                         ml="auto"
-                        spacing={5}
+                        spacing={10}
                         fontFamily="secondary"
                         fontSize="md"
                         display={["none", "none", "flex", "flex", "flex"]}

@@ -47,7 +47,7 @@ const Home: NextPage = () => {
                     justifyContent="center"
                 >
                     <Flex flexDir="column">
-                        <Image src="/assets/flor.png" w="100px" />
+                        <Image src="/assets/flor.png" w="100px" alt="logo" />
                         <HStack spacing={3} mt="1rem">
                             <Icon
                                 as={FaFacebook}
@@ -61,18 +61,6 @@ const Home: NextPage = () => {
                             />
                         </HStack>
                     </Flex>
-                    {/*  <Flex flexDir="column">
-                        <Text
-                            fontSize="4xl"
-                            textAlign="center"
-                            fontFamily="primary"
-                        >
-                            ANDREA FINTEN
-                        </Text>
-                        <Text fontFamily="secondary">
-                            © 2023 Andrea Finten. Todos los derechos rervados
-                        </Text>
-                    </Flex> */}
                     <Flex flexDir="column" gap='.5rem' mb='auto'>
                         <Text
                             fontSize="4xl"

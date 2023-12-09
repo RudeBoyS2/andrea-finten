@@ -63,21 +63,21 @@ const Services: React.FC = () => {
                 bg="secondary"
                 id="services"
             >
-                <Flex py="2rem" gap="4rem" fontFamily='primary' >
+                <Flex py="2rem" gap="10rem" fontFamily='primary' >
                     <ClientsIcon
                         icon={IoPeopleCircleOutline }
-                        text="Subscriptores"
+                        text="Alumnos"
                         number="+100"
+                    />
+                    <ClientsIcon
+                        icon={MdOutlinePlayLesson}
+                        text="Recursos Teóricos"
+                        number="+10"
                     />
                     <ClientsIcon
                         icon={FaGraduationCap}
                         text="Cursos"
-                        number="+20"
-                    />
-                    <ClientsIcon
-                        icon={MdOutlinePlayLesson}
-                        text="Recursos teóricos"
-                        number="+30"
+                        number="+5"
                     />
                 </Flex>
             </Flex>

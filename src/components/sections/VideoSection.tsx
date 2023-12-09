@@ -11,30 +11,15 @@ const VideoSection: React.FC = () => {
                 gap="4rem"
                 justifyContent='center'
                 px='1rem'
-                pt='10rem'
+                pt='6rem'
             >
-                <AspectRatio h="auto" maxH='500px' maxW='600px' w="100%" justifyContent='center' >
+                <AspectRatio h="auto" maxH='600px' maxW='700px' w="100%" justifyContent='center' >
                     <iframe
                         title="naruto"
                         src="/assets/video.mp4"
                         allowFullScreen
                     />
                 </AspectRatio>
-                {/* <Flex w="50%" justifyContent="end">
-                        <AspectRatio w="350px" h="350px">
-                            <iframe
-                                title="naruto"
-                                src="/assets/video.mp4"
-                                allowFullScreen
-                            />
-                        </AspectRatio>
-                    </Flex>
-                    <Flex w="50%">
-                        <Flex flexDir='column' textAlign='center' fontSize='3xl' fontFamily='primary'>
-                            <Text>Aprende las últimas en </Text>
-                            <Text>ARMONIZACIÓN OROFACIAL</Text>
-                        </Flex> 
-                    </Flex> */}
             </Flex>
         </>
     );
