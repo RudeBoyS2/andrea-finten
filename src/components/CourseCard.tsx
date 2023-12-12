@@ -33,15 +33,16 @@ const CourseCard: React.FC<Props> = ({ src, alt, title, hours, description }) =>
                     fit="cover"
                 />
                 <Flex p="1rem" flexDir="column" gap="1rem">
-                    <Text fontFamily="primary" fontSize="13px" color="#606060">
+                    <Text fontFamily="primary" fontSize="14px" >
                         {title}
                     </Text>
                     <Text
                         fontFamily="primary"
-                        fontSize="sm"
+                        fontSize="12px"
                         fontWeight="bold"
                         w="100%"
                         mb="1rem"
+                        color="#606060"
                     >
                         {description}
                     </Text>

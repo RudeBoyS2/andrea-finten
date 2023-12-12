@@ -19,24 +19,24 @@ const CoursesSection: React.FC = () => {
                 <Flex gap="4rem" py="2rem" justifyContent="center" alignItems='center' flexDir={['column', 'column', 'row', 'row', 'row']}>
                     <CourseCard
                         src="/assets/inicial.jpg"
-                        alt="inicial"
-                        title="Acido Hialuronico Inicial"
+                        alt="Ácido Hialurónico Inicial"
+                        title="Ácido Hialurónico Inicial"
                         hours={2}
-                        description="Acido"
-                    />
-                    <CourseCard
-                        src="/assets/avanzado.jpg"
-                        alt="inicial"
-                        title="Acido Hialuronico Inicial"
-                        hours={2}
-                        description="Acido"
+                        description="Conocimientos básicos"
                     />
                     <CourseCard
                         src="/assets/toxina.jpg"
-                        alt="inicial"
-                        title="Acido Hialuronico Inicial"
+                        alt="Tóxina Botulínica"
+                        title="Tóxina Botulínica"
                         hours={2}
-                        description="Acido"
+                        description="Todo sobre la toxina botulínica"
+                    />
+                    <CourseCard
+                        src="/assets/avanzado.jpg"
+                        alt="Ácido Hialurónico Avanzado"
+                        title="Ácido Hialurónico Avanzado"
+                        hours={2}
+                        description="Conocimientos avanzados"
                     />
                 </Flex>
             </Flex>

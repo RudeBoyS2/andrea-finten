@@ -48,7 +48,7 @@ const Home: NextPage = () => {
                 >
                     <Flex flexDir="column">
                         <Image src="/assets/flor.png" w="100px" alt="logo" />
-                        <HStack spacing={3} mt="1rem">
+                        <Flex justify="space-around" align="center" mt="1rem">
                             <Icon
                                 as={FaFacebook}
                                 fontSize="4xl"
@@ -59,7 +59,7 @@ const Home: NextPage = () => {
                                 fontSize="42px"
                                 fill="#DA7B8E"
                             />
-                        </HStack>
+                        </Flex>
                     </Flex>
                     <Flex flexDir="column" gap='.5rem' mb='auto'>
                         <Text
