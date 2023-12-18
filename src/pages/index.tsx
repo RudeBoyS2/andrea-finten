@@ -40,7 +40,7 @@ const Home: NextPage = () => {
                     maxW="1920px"
                     py="1.5em"
                     flexDir={["column", "column", "row", "row", "row"]}
-                    gap="10rem"
+                    gap={["3rem","4rem","5rem","10rem","10rem"]}
                     alignItems="center"
                     id="foter"
                     bg="#fff"

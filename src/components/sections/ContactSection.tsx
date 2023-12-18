@@ -23,7 +23,7 @@ const ContactSection: React.FC = () => {
         alignItems="center"
         id="contact"
       >
-        <Flex w="50%" justifyContent="end">
+        <Flex w="50%" justifyContent={["end","end","end","end","end"]}>
           <VStack>
             <Image src="/assets/flor.png" h="200px" fit="contain" alt="logo" />
             <Flex fontFamily="primary" gap="3" fontSize="4xl">
@@ -32,7 +32,7 @@ const ContactSection: React.FC = () => {
             </Flex>
           </VStack>
         </Flex>
-        <Flex w="50%" justifyContent="start">
+        <Flex w="50%" justifyContent={["center","center","start","start","start"]}>
           <VStack
             w="400px"
             fontFamily="primary"

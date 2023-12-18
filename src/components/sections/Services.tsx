@@ -8,8 +8,6 @@ const Services: React.FC = () => {
     return (
         <>
             <Flex
-                maxW="1920px"
-                w="100%"
                 justifyContent={[
                     "center",
                     "center",
@@ -20,6 +18,11 @@ const Services: React.FC = () => {
                 flexDir={["column", "column", "column", "row", "row"]}
                 id="services"
                 bg='#fff'
+                w="100%"
+                maxW="1920px"
+                gap="4rem"
+                px='1rem'
+                pt='6rem'
             >
                 <Flex
                     py="4rem"
@@ -63,7 +66,7 @@ const Services: React.FC = () => {
                 bg="secondary"
                 id="services"
             >
-                <Flex py="2rem" gap="10rem" fontFamily='primary' >
+                <Flex py="2rem" justifyContent='space-around' gap='2rem' fontFamily='primary' >
                     <ClientsIcon
                         icon={IoPeopleCircleOutline }
                         text="Alumnos"
