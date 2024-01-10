@@ -17,12 +17,10 @@ const Services: React.FC = () => {
                 ]}
                 flexDir={["column", "column", "column", "row", "row"]}
                 id="services"
-                bg='#fff'
+                bg="#fff"
                 w="100%"
                 maxW="1920px"
                 gap="4rem"
-                px='1rem'
-                pt='6rem'
             >
                 <Flex
                     py="4rem"
@@ -66,9 +64,14 @@ const Services: React.FC = () => {
                 bg="secondary"
                 id="services"
             >
-                <Flex py="2rem" justifyContent='space-around' gap='2rem' fontFamily='primary' >
+                <Flex
+                    py="2rem"
+                    justifyContent="space-around"
+                    gap={["2rem","3rem","4rem","5rem","6rem"]}
+                    fontFamily="primary"
+                >
                     <ClientsIcon
-                        icon={IoPeopleCircleOutline }
+                        icon={IoPeopleCircleOutline}
                         text="Alumnos"
                         number="+100"
                     />

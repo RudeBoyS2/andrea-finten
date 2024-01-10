@@ -40,7 +40,7 @@ const Home: NextPage = () => {
                     maxW="1920px"
                     py="1.5em"
                     flexDir={["column", "column", "row", "row", "row"]}
-                    gap={["3rem","4rem","5rem","10rem","10rem"]}
+                    gap={["3rem", "4rem", "5rem", "10rem", "10rem"]}
                     alignItems="center"
                     id="foter"
                     bg="#fff"
@@ -61,7 +61,7 @@ const Home: NextPage = () => {
                             />
                         </Flex>
                     </Flex>
-                    <Flex flexDir="column" gap='.5rem' mb='auto'>
+                    <Flex flexDir="column" gap=".5rem" mb="auto">
                         <Text
                             fontSize="4xl"
                             textAlign="center"
@@ -93,7 +93,7 @@ const Home: NextPage = () => {
                         </Text>
                     </Flex>
 
-                    <Flex flexDir="column" mb='auto'>
+                    <Flex flexDir="column" mb="auto">
                         <Text
                             fontSize="4xl"
                             textAlign="center"
