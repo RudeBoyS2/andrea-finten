@@ -74,6 +74,7 @@ const Home: NextPage = () => {
                             fontFamily="primary"
                             color="#939090"
                             fontSize="md"
+                            textAlign='center'
                         >
                             Home
                         </Text>
@@ -81,6 +82,7 @@ const Home: NextPage = () => {
                             fontFamily="primary"
                             color="#939090"
                             fontSize="md"
+                            textAlign='center'
                         >
                             Ayuda
                         </Text>
@@ -88,6 +90,7 @@ const Home: NextPage = () => {
                             fontFamily="primary"
                             color="#939090"
                             fontSize="md"
+                            textAlign='center'
                         >
                             WhatsApp
                         </Text>
@@ -106,6 +109,7 @@ const Home: NextPage = () => {
                             fontFamily="primary"
                             color="#939090"
                             fontSize="md"
+                            textAlign='center'
                         >
                             Dirección
                         </Text>
@@ -114,6 +118,7 @@ const Home: NextPage = () => {
                             color="#939090"
                             fontSize="md"
                             mt=".5rem"
+                            textAlign='center'
                         >
                             +00 0000 000 0
                         </Text>

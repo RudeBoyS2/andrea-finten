@@ -17,6 +17,7 @@ import { useTheme } from "@emotion/react";
 import NavbarLinkScroll from "./NavbarLinkScroll";
 import { FaBars } from "react-icons/fa";
 import { useRef } from "react";
+import { useRouter } from 'next/router'
 
 const NavbarIndex: React.FC = () => {
     const theme: any = useTheme();
@@ -26,6 +27,9 @@ const NavbarIndex: React.FC = () => {
     const handler = () => {
         onClose()
     }
+    const router = useRouter()
+
+    
     return (
         <>
             <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
@@ -98,7 +102,7 @@ const NavbarIndex: React.FC = () => {
                         bg="secondary"
                         boxShadow="0px 0px 5px 3px #dedede"
                     >
-                        <Text color="#fff">Iniciar sesión</Text>
+                        <Text color="#fff" onClick={() => router.push('/campus')}>Iniciar sesión</Text>
                     </Flex>
                     <Icon
                         as={FaBars}

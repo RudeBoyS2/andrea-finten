@@ -8,7 +8,6 @@ import {
     Text,
 } from "@chakra-ui/react";
 import React from "react";
-import ChakraNextImage from "../ChakraNextImage";
 
 const Hero: React.FC = () => {
     return (
