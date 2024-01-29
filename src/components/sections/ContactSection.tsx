@@ -4,6 +4,7 @@ import {
     HStack,
     Image,
     Input,
+    Link,
     Text,
     VStack,
 } from "@chakra-ui/react";
@@ -11,6 +12,7 @@ import React from "react";
 import ChakraNextImage from "../ChakraNextImage";
 
 const ContactSection: React.FC = () => {
+    //5493625243921
     return (
         <>
             <Flex
@@ -34,7 +36,12 @@ const ContactSection: React.FC = () => {
                             fit="contain"
                             alt="logo"
                         />
-                        <Text fontFamily="primary" gap="3" fontSize="4xl" textAlign='center'>
+                        <Text
+                            fontFamily="primary"
+                            gap="3"
+                            fontSize="4xl"
+                            textAlign="center"
+                        >
                             Andrea Finten
                         </Text>
                     </Flex>
@@ -57,30 +64,43 @@ const ContactSection: React.FC = () => {
                         p="2rem"
                         rounded="10px"
                     >
-                        <Text mb="1rem" w='90%'>
+                        <Text mb="1rem" w="90%">
                             Para obtener información adicional sobre nuestros
                             cursos, contáctanos a través de nuestro correo
                             electrónico o redes sociales.
                         </Text>
                         <HStack spacing={10}>
-                            <ChakraNextImage
-                                src="/icons/wpp.png"
-                                h="100px"
-                                w="50px"
-                                fit="contain"
-                            />
-                            <ChakraNextImage
-                                src="/icons/ig.png"
-                                h="100px"
-                                w="50px"
-                                fit="contain"
-                            />
-                            <ChakraNextImage
-                                src="/icons/gmail.png"
-                                h="100px"
-                                w="50px"
-                                fit="contain"
-                            />
+                            <Link href="https://wa.link/184mf9" isExternal>
+                                <ChakraNextImage
+                                    src="/icons/wpp.png"
+                                    h="100px"
+                                    w="50px"
+                                    fit="contain"
+                                />
+                            </Link>
+                            <Link
+                                href="https://www.instagram.com/andrea_finten_odontologa/"
+                                isExternal
+                            >
+                                <ChakraNextImage
+                                    src="/icons/ig.png"
+                                    h="100px"
+                                    w="50px"
+                                    fit="contain"
+                                />
+                            </Link>
+
+                            <Link
+                                href="mailto:andreafintencapacitaciones@gmail.com"
+                                isExternal
+                            >
+                                <ChakraNextImage
+                                    src="/icons/gmail.png"
+                                    h="100px"
+                                    w="50px"
+                                    fit="contain"
+                                />
+                            </Link>
                         </HStack>
                     </VStack>
                 </Flex>

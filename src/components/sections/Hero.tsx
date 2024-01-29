@@ -8,6 +8,7 @@ import {
     Text,
 } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-scroll";
 
 const Hero: React.FC = () => {
     return (
@@ -57,7 +58,10 @@ const Hero: React.FC = () => {
                         <Button bg="#dedede" color="#202020" _hover={{ transform: 'scale(1.1)' }} _active={{}}>
                             Consultar
                         </Button>
+                        <Box as={Link} to='courses' spy={true} smooth={true}>
+
                         <Button bg='secondary' color='#fff' _hover={{ transform: 'scale(1.1)' }} _active={{}}>Ver cursos</Button>
+                        </Box>
                     </Flex>
                 </Flex>
                 <Flex justifyContent='center'>

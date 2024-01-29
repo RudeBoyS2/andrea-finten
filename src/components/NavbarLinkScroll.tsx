@@ -6,10 +6,12 @@ import styles from "../styles/ActiveClass.module.css";
 type Props = {
   path: string;
   text: string;
-  callback?: () => void
+  callback?: () => void;
+  fontFamily?: string;
+  color: string
 };
 
-const NavbarLinkScroll: React.FC<Props> = ({ path, text, callback }) => {
+const NavbarLinkScroll: React.FC<Props> = ({ path, text, callback, fontFamily, color }) => {
   const router = useRouter();
   const theme = useTheme();
   return (
@@ -29,7 +31,7 @@ const NavbarLinkScroll: React.FC<Props> = ({ path, text, callback }) => {
           transition: 'all 0.2s ease'
         }}
       >
-        <Text _hover={{ color: '#944141' }}>{text}</Text>
+        <Text _hover={{ color: '#944141' }} fontFamily={fontFamily} color={color}>{text}</Text>
       </Box>
     </>
   );

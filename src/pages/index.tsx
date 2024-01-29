@@ -8,6 +8,7 @@ import {
     Input,
     HStack,
     Icon,
+    Link,
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { getSession } from "next-auth/react";
@@ -18,8 +19,9 @@ import CoursesSection from "../components/sections/CoursesSection";
 import ContactSection from "../components/sections/ContactSection";
 import NavbarIndex from "../components/NavbarIndex";
 import { AiFillInstagram } from "react-icons/ai";
-import { FaFacebook } from "react-icons/fa";
-
+import NavbarLinkScroll from "../components/NavbarLinkScroll";
+import { CiMail } from "react-icons/ci";
+import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
 const Home: NextPage = () => {
     return (
         <>
@@ -48,17 +50,27 @@ const Home: NextPage = () => {
                 >
                     <Flex flexDir="column">
                         <Image src="/assets/flor.png" w="100px" alt="logo" />
-                        <Flex justify="space-around" align="center" mt="1rem">
-                            <Icon
-                                as={FaFacebook}
-                                fontSize="4xl"
-                                fill="#DA7B8E"
-                            />
-                            <Icon
-                                as={AiFillInstagram}
-                                fontSize="42px"
-                                fill="#DA7B8E"
-                            />
+                        <Flex justify="space-around" align="center" mt="1rem" gap='1rem'>
+                            <Link
+                                href="https://www.instagram.com/andrea_finten_odontologa/"
+                                isExternal
+                            >
+                                <Icon
+                                    as={AiFillInstagram}
+                                    fontSize="5xl"
+                                    fill="#DA7B8E"
+                                />
+                            </Link>
+                            <Link
+                                href="https://wa.link/184mf9"
+                                isExternal
+                            >
+                                <Icon
+                                    as={IoLogoWhatsapp}
+                                    fontSize="5xl"
+                                    fill="#DA7B8E"
+                                />
+                            </Link>
                         </Flex>
                     </Flex>
                     <Flex flexDir="column" gap=".5rem" mb="auto">
@@ -70,33 +82,32 @@ const Home: NextPage = () => {
                         >
                             Links
                         </Text>
-                        <Text
+                        <NavbarLinkScroll
+                            text="Inicio"
+                            path="index"
                             fontFamily="primary"
-                            color="#939090"
-                            fontSize="md"
-                            textAlign='center'
-                        >
-                            Home
-                        </Text>
-                        <Text
+                            color="#717171"
+                        />
+                        <NavbarLinkScroll
+                            text="Servicios"
+                            path="services"
                             fontFamily="primary"
-                            color="#939090"
-                            fontSize="md"
-                            textAlign='center'
-                        >
-                            Ayuda
-                        </Text>
-                        <Text
+                            color="#717171"
+                        />
+                        <NavbarLinkScroll
+                            text="Cursos"
+                            path="courses"
                             fontFamily="primary"
-                            color="#939090"
-                            fontSize="md"
-                            textAlign='center'
-                        >
-                            WhatsApp
-                        </Text>
+                            color="#717171"
+                        />
                     </Flex>
 
-                    <Flex flexDir="column" mb="auto">
+                    <Flex
+                        flexDir="column"
+                        mb="auto"
+                        fontFamily="primary"
+                        gap=".6rem"
+                    >
                         <Text
                             fontSize="4xl"
                             textAlign="center"
@@ -105,23 +116,37 @@ const Home: NextPage = () => {
                         >
                             Contacto
                         </Text>
-                        <Text
-                            fontFamily="primary"
-                            color="#939090"
-                            fontSize="md"
-                            textAlign='center'
-                        >
-                            Dirección
-                        </Text>
-                        <Text
-                            fontFamily="primary"
-                            color="#939090"
-                            fontSize="md"
-                            mt=".5rem"
-                            textAlign='center'
-                        >
-                            +00 0000 000 0
-                        </Text>
+
+                        <HStack>
+                            <Icon
+                                as={IoMdMail}
+                                fontSize="3xl"
+                                fill="secondary"
+                            />
+                            <Text textAlign="center" color="#717171">
+                                andreafintencapacitaciones@gmail.com
+                            </Text>
+                        </HStack>
+                        <HStack>
+                            <Icon
+                                as={IoLogoWhatsapp}
+                                fontSize="3xl"
+                                fill="secondary"
+                            />
+                            <Text textAlign="center" color="#717171">
+                                +54 9 3624-723110
+                            </Text>
+                        </HStack>
+                        <HStack>
+                            <Icon
+                                as={AiFillInstagram}
+                                fontSize="3xl"
+                                fill="secondary"
+                            />
+                            <Text textAlign="center" color="#717171">
+                                @andrea_finten_odontologa
+                            </Text>
+                        </HStack>
                     </Flex>
                 </Flex>
             </Flex>
