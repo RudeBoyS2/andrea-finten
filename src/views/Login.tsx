@@ -28,7 +28,7 @@ const Login: NextPage = (props) => {
     const res = await signIn("credentials", {
       email: values.email,
       password: values.password,
-      redirect: true,
+      redirect: false,
     }).then((res) => {
       if (res?.error) {
         toast({
