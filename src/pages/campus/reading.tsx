@@ -37,8 +37,7 @@ const Courses: React.FC = () => {
         );
         setCourses(filteredData);
 
-        const pdfs: (Pdf | undefined)[] = filteredData?
-          .map((course: Course): any => course.coursePdf)
+        const pdfs: (Pdf | undefined)[] = filteredData.map((course: Course): any => course.coursePdf)
           .flat();
 
         setPdfs(pdfs);
