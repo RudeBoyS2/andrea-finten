@@ -8,7 +8,7 @@ type Props = {
   text: string;
   callback?: () => void;
   fontFamily?: string;
-  color: string
+  color?: string
 };
 
 const NavbarLinkScroll: React.FC<Props> = ({ path, text, callback, fontFamily, color }) => {

@@ -55,14 +55,14 @@ const TableUser: React.FC<Props> = ({ users, setUsers }) => {
 
       <AddButton onOpen={onOpen} title="Agregar Usuario" />
       <TableContainer w="100%" overflowY="auto" pl={isOpen ? "0" : "0"}>
-        <Table variant="striped" bg="primary">
-          <Thead position="sticky" top="0" zIndex="100" bg="primary">
+        <Table variant="striped">
+          <Thead position="sticky" top="0" zIndex="100">
             <Tr>
-              <Th w="20%" fontSize="md" color="black">Avatar</Th>
-              <Th w="20%" fontSize="md" color="black">Nombre</Th>
-              <Th w="20%" fontSize="md" color="black">Correo</Th>
-              <Th w="20%" fontSize="md" color="black">Editar</Th>
-              <Th w="20%" fontSize="md" color="black">Borrar</Th>
+              <Th w="20%" fontSize="sm" fontWeight='medium' color="black">Avatar</Th>
+              <Th w="20%" fontSize="sm" fontWeight='medium' color="black">Nombre</Th>
+              <Th w="20%" fontSize="sm" fontWeight='medium' color="black">Correo</Th>
+              <Th w="20%" fontSize="sm" fontWeight='medium' color="black">Editar</Th>
+              <Th w="20%" fontSize="sm" fontWeight='medium' color="black">Borrar</Th>
             </Tr>
           </Thead>
           <Tbody fontSize="lg">

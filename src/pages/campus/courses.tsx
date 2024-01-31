@@ -44,7 +44,7 @@ const Courses: React.FC = () => {
 
                 // create a set of unique topics
                 const topicsSet = new Set();
-                res.data.forEach((course: Course) => {
+                res?.data?.forEach((course: Course) => {
                     topicsSet.add(course.topic);
                 });
                 setTopics(Array.from(topicsSet));

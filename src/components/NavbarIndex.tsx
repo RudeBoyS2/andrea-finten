@@ -17,35 +17,77 @@ import { useTheme } from "@emotion/react";
 import NavbarLinkScroll from "./NavbarLinkScroll";
 import { FaBars } from "react-icons/fa";
 import { useRef } from "react";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
 const NavbarIndex: React.FC = () => {
     const theme: any = useTheme();
     const btnRef = useRef();
     const { isOpen, onOpen, onClose } = useDisclosure();
-    
-    const handler = () => {
-        onClose()
-    }
-    const router = useRouter()
 
-    
+    const handler = () => {
+        onClose();
+    };
+    const router = useRouter();
+
     return (
         <>
             <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
                 <DrawerOverlay />
                 <DrawerContent>
                     <DrawerCloseButton />
-                    <Flex flexDir="column" w='100%' h='100vh' justifyContent='center'  fontSize='2xl' px='2rem' gap='5rem'>
-                        <NavbarLinkScroll text="Inicio" path="index" callback={() => handler()}/>
-                        <NavbarLinkScroll text="Servicios" path="services" callback={() => handler()}/>
-                        <NavbarLinkScroll text="Cursos" path="courses" callback={() => handler()}/>
-                        <NavbarLinkScroll text="Contacto" path="contact" callback={() => handler()}/>
+                    <Flex
+                        flexDir="column"
+                        w="100%"
+                        h="100vh"
+                        justifyContent="center"
+                        fontSize="2xl"
+                        px="2rem"
+                        gap="5rem"
+                    >
+                        <NavbarLinkScroll
+                            text="Inicio"
+                            path="index"
+                            callback={() => handler()}
+                        />
+                        <NavbarLinkScroll
+                            text="Servicios"
+                            path="services"
+                            callback={() => handler()}
+                        />
+                        <NavbarLinkScroll
+                            text="Cursos"
+                            path="courses"
+                            callback={() => handler()}
+                        />
+                        <NavbarLinkScroll
+                            text="Contacto"
+                            path="contact"
+                            callback={() => handler()}
+                        />
+                        <Flex
+                            rounded="50px"
+                            cursor="pointer"
+                            transition="all .2s ease"
+                            _hover={{
+                                transform: "scale(1.02)",
+                            }}
+                            bg="secondary"
+                            boxShadow="0px 0px 5px 3px #dedede"
+                            justifyContent='center'
+                            py='.5rem'
+                        >
+                            <Text
+                                color="#fff"
+                                onClick={() => router.push("/campus")}
+                            >
+                                Iniciar sesión
+                            </Text>
+                        </Flex>
                     </Flex>
                 </DrawerContent>
             </Drawer>
             {/* Desktop navbar */}
-            <Flex w="100%" justifyContent="center" >
+            <Flex w="100%" justifyContent="center">
                 <Flex
                     alignContent="center"
                     w="100%"
@@ -64,7 +106,7 @@ const NavbarIndex: React.FC = () => {
                         fit="contain"
                     />
                     <Text
-                    ml='2rem'
+                        ml="2rem"
                         textAlign="center"
                         alignSelf="center"
                         fontSize="2xl"
@@ -80,7 +122,7 @@ const NavbarIndex: React.FC = () => {
                         fontSize="md"
                         display={["none", "none", "flex", "flex", "flex"]}
                     >
-                        <NavbarLinkScroll text="Inicio" path="index"  />
+                        <NavbarLinkScroll text="Inicio" path="index" />
                         <NavbarLinkScroll text="Servicios" path="services" />
                         <NavbarLinkScroll text="Cursos" path="courses" />
                         <NavbarLinkScroll text="Contacto" path="contact" />
@@ -94,15 +136,20 @@ const NavbarIndex: React.FC = () => {
                         py=".5rem"
                         h="40px"
                         rounded="50px"
-                        cursor='pointer'
-                        transition='all .2s ease'
+                        cursor="pointer"
+                        transition="all .2s ease"
                         _hover={{
-                            transform: 'scale(1.02)'
+                            transform: "scale(1.02)",
                         }}
                         bg="secondary"
                         boxShadow="0px 0px 5px 3px #dedede"
                     >
-                        <Text color="#fff" onClick={() => router.push('/campus')}>Iniciar sesión</Text>
+                        <Text
+                            color="#fff"
+                            onClick={() => router.push("/campus")}
+                        >
+                            Iniciar sesión
+                        </Text>
                     </Flex>
                     <Icon
                         as={FaBars}
@@ -110,7 +157,7 @@ const NavbarIndex: React.FC = () => {
                         ml="auto"
                         alignSelf="center"
                         onClick={onOpen}
-                       // ref={btnRef}
+                        // ref={btnRef}
                         display={["flex", "flex", "none", "none", "none"]}
                     />
                 </Flex>

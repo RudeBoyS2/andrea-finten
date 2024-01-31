@@ -107,7 +107,7 @@ const ModalCourse: React.FC<Props> = ({
                             variant="filled"
                             placeholder="Selecciona un tema"
                           >
-                            {topics.map((topic: Topic, key) => {
+                            {topics?.map((topic: Topic, key) => {
                               return (
                                 <option key={key} value={topic.title}>
                                   {topic.title}

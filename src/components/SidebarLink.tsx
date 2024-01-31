@@ -22,7 +22,7 @@ const SidebarLink: React.FC<Props> = ({
     const router = useRouter();
     const pathname = router.pathname;
 
-    const activeColor = path === pathname ? "tertiary" : "white"
+    const activeColor = path === pathname ? "#fff" : "#ccc"
 
     return (
         <>
@@ -45,7 +45,7 @@ const SidebarLink: React.FC<Props> = ({
                     <Icon
                         as={icon}
                         alignSelf="center"
-                        fontSize="4xl"
+                        fontSize="2xl"
                         fill={activeColor}
                     />
                     <Text

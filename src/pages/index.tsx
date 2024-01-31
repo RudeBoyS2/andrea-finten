@@ -20,7 +20,6 @@ import ContactSection from "../components/sections/ContactSection";
 import NavbarIndex from "../components/NavbarIndex";
 import { AiFillInstagram } from "react-icons/ai";
 import NavbarLinkScroll from "../components/NavbarLinkScroll";
-import { CiMail } from "react-icons/ci";
 import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
 const Home: NextPage = () => {
     return (

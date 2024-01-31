@@ -25,9 +25,9 @@ const Home: NextPage = () => {
         <Sidebar open={open} setOpen={setOpen} />
         {/* <IndexLayout /> */}
         <Container open={open} setOpen={setOpen}>
-          <Flex flexDirection="column" align="center" h="100%" bg="yellow">
+          <Flex flexDirection="column" align="center" h="100%">
             <Flex
-              bgColor="primary"
+              bgColor="secondary"
               w="100%"
               h="18%"
               minH="18%"
@@ -57,7 +57,7 @@ const Home: NextPage = () => {
                 Bienvenido/a {session?.user?.name}!
               </Heading>
             </Flex>
-            <Flex my={{base: "10", md: "20"}} gap="8" h="65%" w="100%" align="center" justify="space-evenly" flexDir={{base: "column", md: "row"}} bg="green">
+            <Flex my={{base: "10", md: "20"}} gap="8" h="65%" w="100%" align="center" justify="space-evenly" flexDir={{base: "column", md: "row"}}>
               
             </Flex>
           </Flex>

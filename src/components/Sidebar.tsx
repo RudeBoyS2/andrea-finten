@@ -40,7 +40,7 @@ const Sidebar: React.FC<Props> = ({ open, setOpen }) => {
             cursor="pointer"
             as={HiBars3}
             fill="#dedede"
-            fontSize="5xl"
+            fontSize="3xl"
             onClick={() => setOpen(!open)}
             transform={open ? "rotate(90deg)" : "rotate(0)"}
             transition="all .2s ease"
@@ -84,7 +84,7 @@ const Sidebar: React.FC<Props> = ({ open, setOpen }) => {
           <Icon
             as={RiLogoutBoxLine}
             alignSelf="center"
-            fontSize="4xl"
+            fontSize="3xl"
             fill="#f1f2f3"
           />
           <Text

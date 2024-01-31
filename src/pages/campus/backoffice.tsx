@@ -25,22 +25,22 @@ const Backoffice: React.FC = () => {
 
   useEffect(() => {
     API.getUsers().then((res: any) => {
-      setUsers(res.data);
+      setUsers(res?.data);
     });
 
     API.getCourses().then((res: any) => {
-      setCourses(res.data);
+      setCourses(res?.data);
 
-      const coursesWithPdf = res.data.filter(
-        (course: Course) => course.coursePdf?.length
+      const coursesWithPdf = res?.data?.filter(
+        (course: Course) => course?.coursePdf?.length
       );
-      const pdfs: Pdf[] = coursesWithPdf.map((course: Course) => course.coursePdf).flat();
+      const pdfs: Pdf[] = coursesWithPdf?.map((course: Course) => course.coursePdf).flat();
       
       setPDFs(pdfs);
     });
 
     API.getTopics().then((res: any) => {
-      setTopics(res.data);
+      setTopics(res?.data);
     });
 
   }, []);

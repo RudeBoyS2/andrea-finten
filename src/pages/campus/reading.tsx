@@ -32,13 +32,12 @@ const Courses: React.FC = () => {
   useEffect(() => {
     if (status == "authenticated") {
       API.getMyCoursesByUserId(session.user.id).then((res: any) => {
-        const filteredData: Course[] = res.data.filter(
+        const filteredData: Course[] = res?.data?.filter(
           (course: Course) => course.coursePdf!.length > 0
         );
-        console.log(filteredData);
         setCourses(filteredData);
 
-        const pdfs: (Pdf | undefined)[] = filteredData
+        const pdfs: (Pdf | undefined)[] = filteredData?
           .map((course: Course): any => course.coursePdf)
           .flat();
 
@@ -61,7 +60,7 @@ const Courses: React.FC = () => {
             align="center"
             py="6"
           >
-            {pdfs.length === 0 ? (
+            {pdfs?.length === 0 ? (
               <Heading as="h1">No tienes PDFs asignados</Heading>
             ) : (
               <Flex
@@ -73,7 +72,7 @@ const Courses: React.FC = () => {
                 align="center"
                 flexWrap={{ base: "nowrap", md: "wrap" }}
               >
-                {pdfs.map((pdf) => (
+                {pdfs?.map((pdf) => (
                   <PdfCard pdf={pdf} key={pdf?._id} />
                 ))}
               </Flex>
